@@ -1,0 +1,291 @@
+<form action="" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center d-flex row mb-5" [formGroup]="miForm" (ngSubmit)="submitFormulario()">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center d-flex row mt-3">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 " >
+            <h2 class="alert alert-primary text-center"  role="alert">
+               Identificación <i class="fa-solid fa-user-plus"></i> 
+            </h2>
+        </div>
+        
+        <div class="col-12 col-sm-12 col-md-12 col-lg-15 col-xl-15 justify-content-center d-flex row mt-3">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 justify-content-center d-flex row">
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label   class="fw-bold">Id</label>
+                    <input type="text" class="form-control form-control-sm mt-2"  formControlName="id">
+                </div> -->
+                
+                  <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="inputGroup-sizing-sm"><span class="text-danger">*</span>Apellido Paterno </label>
+                    <input type="text" class="form-control" formControlName="apPaterno" [class.is-invalid] = "form.apPaterno.touched && form.apPaterno.errors" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    <div class="invalid-feedback">El apellido paterno es requerido</div>
+                </div>
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label   class="fw-bold">Apellido Paterno <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-control-sm mt-2"  formControlName="apPaterno" [class.is-invalid] = "form.apPaterno.touched && form.apPaterno.errors">
+                    <div class="invalid-feedback">El apellido es requerido</div>
+                </div> -->
+
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Apellido Materno</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" formControlName="apMaterno">
+                </div>
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Apellido Materno</label>
+                    <input type="text" class="form-control form-control-sm mt-2"  formControlName="apMaterno">
+                </div> -->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="inputGroup-sizing-sm"><span class="text-danger">*</span>Nombre </label>
+                    <input type="text" class="form-control" formControlName="nombre" [class.is-invalid] = "form.nombre.touched && form.nombre.errors" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            
+                    <div class="invalid-feedback">El nombre es requerido</div>
+                </div>
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Nombre <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-control-sm mt-2"  formControlName="nombre" [class.is-invalid] = "form.nombre.touched && form.nombre.errors">
+                    <div class="invalid-feedback">El nombre es requerido</div>
+                </div> -->
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="inputGroup-sizing-sm"><span class="text-danger">*</span>Sexo  </label>
+                    <select type="text" class="form-select "  formControlName="sexo" [class.is-invalid] = "form.sexo.touched && form.sexo.errors">
+                        <option value="">----------- </option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <div class="invalid-feedback">La especificacion es requerida</div>
+                </div>
+                
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Sexo <span class="text-danger">*</span></label>
+                    <select type="text" class="form-control form-control-sm mt-2"  formControlName="sexo" [class.is-invalid] = "form.sexo.touched && form.sexo.errors">
+                        <option value="">-----------</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <div class="invalid-feedback">La especificacion es requerida</div>
+                </div> -->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="inputGroup-sizing-sm"><span class="text-danger">*</span>Fecha de nacimiento </label>
+                    <input type="date" class="form-control" formControlName="fechaNacimiento" [class.is-invalid] = "form.fechaNacimiento.touched && form.fechaNacimiento.errors" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    <div class="invalid-feedback">La fecha de nacimiento es requerida</div>
+                </div>
+
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Fecha de nacimiento <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control form-control-sm mt-2"  formControlName="fechaNacimiento" [class.is-invalid] = "form.fechaNacimiento.touched && form.fechaNacimiento.errors">
+                    <div class="invalid-feedback">La fecha de nacimiento es requerida</div>
+                </div> -->
+
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="inputGroup-sizing-sm"><span class="text-danger">*</span>Pais de nacimiento</label>
+                    <select type="text" class="form-select "  (change)="buscarEstados()" #paisNacimento formControlName="paisNacimento" [class.is-invalid] = "form.paisNacimento.touched && form.paisNacimento.errors">
+                        <option value="">-----------</option>
+                        <option *ngFor="let pais of paises" value="{{pais.country_name}}">{{pais.country_name}}</option>  
+                    </select>
+                    <div class="invalid-feedback">El paies de nacimiento es requerido</div>
+                </div>
+
+                
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Pais de nacimiento <span class="text-danger">*</span></label>
+                    <select type="text" class="form-control form-control-sm mt-2"  (change)="buscarEstados()" #paisNacimento formControlName="paisNacimento" [class.is-invalid] = "form.paisNacimento.touched && form.paisNacimento.errors">
+                        <option value="">-----------</option>
+                        <option *ngFor="let pais of paises" value="{{pais.country_name}}">{{pais.country_name}}</option>
+                        
+                    </select>
+                    <div class="invalid-feedback">El paies de nacimiento es requerido</div>
+                </div> -->
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="inputGroup-sizing-sm"><span class="text-danger">*</span>Provincia de nacimiento</label>
+                    <select type="text" class="form-select"  (change)="buscarLocalidad()" #provinciaNacimiento formControlName="provinciaNacimiento" [class.is-invalid] = "form.provinciaNacimiento.touched && form.provinciaNacimiento.errors">
+                        <option value="">-----------</option>
+                        <option *ngFor="let e of estados" value="{{e.state_name}}">{{e.state_name}}</option>
+                    </select>
+                    <div class="invalid-feedback">La provincia de nacimiento es requerida</div>
+                </div> 
+
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Provincia de nacimiento <span class="text-danger">*</span></label>
+                    <select type="text" class="form-control form-control-sm mt-2"  (change)="buscarLocalidad()" #provinciaNacimiento formControlName="provinciaNacimiento" [class.is-invalid] = "form.provinciaNacimiento.touched && form.provinciaNacimiento.errors">
+                        <option value="">-----------</option>
+                        <option *ngFor="let e of estados" value="{{e.state_name}}">{{e.state_name}}</option>
+                        
+                    </select>
+                    <div class="invalid-feedback">La provincia de nacimiento es requerida</div>
+                </div> -->
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="inputGroup-sizing-sm"><span class="text-danger">*</span>Localidad de nacimiento</label>
+                    <select type="text" class="form-select " #localidadNacimiento formControlName="localidadNacimiento" [class.is-invalid] = "form.localidadNacimiento.touched && form.localidadNacimiento.errors">
+                        <option value="">-----------</option>
+                        <option *ngFor="let m of municipios" value="{{m.city_name}}">{{m.city_name}}</option>
+                    </select>
+                    <div class="invalid-feedback">La localidad de nacimiento es requerida</div>
+                </div>
+
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Localidad de nacimiento <span class="text-danger">*</span></label>
+                    <select type="text" class="form-control form-control-sm mt-2" #localidadNacimiento formControlName="localidadNacimiento" [class.is-invalid] = "form.localidadNacimiento.touched && form.localidadNacimiento.errors">
+                        <option value="">-----------</option>
+                        <option *ngFor="let m of municipios" value="{{m.city_name}}">{{m.city_name}}</option>
+                        
+                    </select>
+                    <div class="invalid-feedback">La localidad de nacimiento es requerida</div>
+                </div> -->
+                
+                
+            
+
+            <!-- segundo parte -->
+
+            
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="peso">Peso </label>
+                    <input type="text" class="form-control" formControlName="peso"  aria-label="Sizing example input" aria-describedby="peso">
+                </div>
+
+
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Peso</label>
+                    <input type="text" class="form-control form-control-sm mt-2"  formControlName="peso">
+                </div-->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="Altura">Altura </label>
+                    <input type="text" class="form-control" formControlName="altura"  aria-label="Sizing example input" aria-describedby="Altura">
+                </div>
+
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Altura</label>
+                    <input type="text" class="form-control form-control-sm mt-2"  formControlName="altura">
+                </div-->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="Grupo_Sanguineo">Grupo Sanguineo </label>
+                    <select type="text" class="form-select" formControlName="grupoSanguineo" aria-label="Sizing example input" aria-describedby="Grupo_Sanguineo">
+                        <option value="">-----------</option>
+                        <option value="A+">A+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB+">B+</option>
+                        <option value="AB+">O+</option>
+                    </select>
+                </div>
+
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Grupo Sanguineo</label>
+                    <select type="text" class="form-control form-control-sm mt-2"  formControlName="grupoSanguineo">
+                        <option value="">-----------</option>
+                        <option value="A+">A+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB+">B+</option>
+                        <option value="AB+">O+</option>
+                    </select>
+                </div-->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="Altura">Nacionalidad </label>
+                    <select type="text" class="form-select" formControlName="nacionalidad" aria-label="Sizing example input" aria-describedby="Altura">
+                        <option value="">-----------</option>
+                        <option *ngFor="let pais of paises" value="{{pais.country_name}}">{{pais.country_name}}</option>
+                    </select>
+                </div>
+
+                
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Nacionalidad</label>
+                    <select type="text" class="form-control form-control-sm mt-2"  formControlName="nacionalidad">
+                        <option value="">-----------</option>
+                        <option *ngFor="let pais of paises" value="{{pais.country_name}}">{{pais.country_name}}</option>
+                    </select>
+                </div-->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label  class="input-group-text" id="Estado_Civil">Estado Civil</label>
+                    <select type="text" class="form-select" formControlName="estadoCivil" aria-label="Sizing example input" aria-describedby="Estado_Civil">
+                        <option value="">-----------</option>
+                        <option value="Soltero">Soltero(a)</option>
+                        <option value="Casado">Casado(a)</option>
+                        <option value="Casado">Union libre</option>
+                    </select>
+                </div>
+
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Estado Civil</label>
+                    <select type="text" class="form-control form-control-sm mt-2"  formControlName="estadoCivil">
+                        <option value="">-----------</option>
+                        <option value="Soltero">Soltero(a)</option>
+                        <option value="Casado">Casado(a)</option>
+                        <option value="Casado">Union libre</option>
+                    </select>
+                </div-->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="numLicencia">Numero de licencia</label>
+                    <input type="text" class="form-control"  formControlName="numLicencia" aria-label="Sizing example input" aria-describedby="numLicencia">
+                </div>
+               
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Numero de licencia</label>
+                    <input type="text" class="form-control form-control-sm mt-2"  formControlName="numLicencia">
+                </div-->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="numPasaporte">Numero de pasaporte</label>
+                    <input type="text" class="form-control"  formControlName="numPasaporte" aria-label="Sizing example input" aria-describedby="numPasaporte">
+                </div>
+
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Numero de pasaporte</label>
+                    <input type="text" class="form-control form-control-sm mt-2"  formControlName="numPasaporte">
+                </div-->
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="email">Email</label>
+                    <input type="text" class="form-control"  formControlName="email" aria-label="Sizing example input" aria-describedby="email">
+                </div>
+
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Email</label>
+                    <input type="text" class="form-control form-control-sm mt-2" formControlName="email">
+                </div-->
+
+                <div class="input-group input-group-sm mb-3">
+                    <label class="input-group-text" id="supervisor">Supervisor</label>
+                    <select type="text" class="form-select "  formControlName="supervisor" aria-label="Sizing example input" aria-describedby="supervisor">
+                        <option value="">-----------</option>
+                        <option value="Brandon">Arturo</option>
+                        <option value="Jesus">Jesus</option>
+                        <option value="Jesus">Carlos</option>
+                        <option value="Jesus">Daniel</option>
+                        <option value="Jesus">Miguel</option>
+                        <option value="Jesus">Angel</option>
+                        <option value="Jesus">Fabian</option>
+                    </select>
+                </div>
+
+                <!--div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <label  class="fw-bold">Supervisor</label>
+                    <select type="text" class="form-control form-control-sm mt-2"  formControlName="supervisor">
+                        <option value="">-----------</option>
+                        <option value="Brandon">Arturo</option>
+                        <option value="Jesus">Jesus</option>
+                        <option value="Jesus">Carlos</option>
+                        <option value="Jesus">Daniel</option>
+                        <option value="Jesus">Miguel</option>
+                        <option value="Jesus">Angel</option>
+                        <option value="Jesus">Fabian</option>
+                    </select>
+                </div-->
+
+           
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center d-flex mt-3">
+                <button class="btn btn-success me-5 btn-lg">Guardar <i class="fa-regular fa-floppy-disk"></i></button>
+                <button type="reset" class="btn btn-danger " hidden #borrar>Borrar <i class="fa-solid fa-trash-can"></i></button>
+               
+            </div>
+        </div>
+        
+
+    </div>
+    </div>
+</form>
